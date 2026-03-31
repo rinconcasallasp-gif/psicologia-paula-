@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paula Rincón | Psicóloga</title>
+
+<style>
+body{margin:0;font-family:'Segoe UI',sans-serif;background:#f4f7fb;color:#333;scroll-behavior:smooth;}
+header{
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('foto.png');
+background-size:cover;background-position:center;
+color:white;text-align:center;padding:120px 20px;}
+header h1{font-size:45px;}
+header p{font-size:20px;}
+
+.container{max-width:1100px;margin:auto;padding:60px 20px;}
+
+.section{margin-bottom:70px;opacity:0;transform:translateY(40px);transition:1s;}
+.show{opacity:1;transform:translateY(0);}
+
+.cards{display:flex;gap:20px;flex-wrap:wrap;}
+.card{background:white;padding:25px;border-radius:15px;flex:1;min-width:250px;text-align:center;box-shadow:0 6px 15px rgba(0,0,0,0.1);}
+
+.about{display:flex;gap:30px;flex-wrap:wrap;align-items:center;}
+.about img{width:320px;border-radius:20px;}
+
+.quote{background:#6c9bd2;color:white;padding:30px;border-radius:15px;text-align:center;font-size:22px;}
+
+.testimonial{background:white;padding:20px;border-radius:15px;margin-bottom:15px;box-shadow:0 4px 10px rgba(0,0,0,0.08);}
+
+.btn{display:inline-block;background:#25D366;color:white;padding:15px 35px;border-radius:10px;text-decoration:none;font-size:18px;margin-top:15px;}
+
+form input, form textarea{
+width:100%;padding:12px;margin:10px 0;border-radius:8px;border:1px solid #ccc;
+}
+
+.footer{text-align:center;padding:25px;background:#ddd;}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Paula Stefany Rincón Casallas</h1>
+<p>Psicóloga clínica | Tu bienestar emocional importa</p>
+<a class="btn" href="https://wa.me/573112437441">Agenda tu cita</a>
+</header>
+
+<div class="container">
+
+<div class="section">
+<h2>Servicios</h2>
+<div class="cards">
+<div class="card">Ansiedad y estrés</div>
+<div class="card">Depresión</div>
+<div class="card">Acompañamiento emocional</div>
+</div>
+</div>
+
+<div class="section about">
+<img src="foto.png">
+<div>
+<h2>Sobre mí</h2>
+<p>Soy psicóloga clínica enfocada en ayudarte a sanar emocionalmente. Trabajo desde la empatía, el respeto y la escucha activa.</p>
+</div>
+</div>
+
+<div class="section quote">
+“No tienes que poder con todo. Pedir ayuda es el primer paso.”
+</div>
+
+<div class="section">
+<h2>Testimonios</h2>
+<div class="testimonial">"Me ayudó a entender mis emociones y sentirme mejor."</div>
+<div class="testimonial">"Un espacio seguro donde pude hablar sin miedo."</div>
+</div>
+
+<div class="section">
+<h2>Contáctame</h2>
+<form action="mailto:correo@ejemplo.com" method="post" enctype="text/plain">
+<input type="text" placeholder="Tu nombre" required>
+<input type="email" placeholder="Tu correo" required>
+<textarea rows="4" placeholder="Escribe tu mensaje"></textarea>
+<button class="btn" type="submit">Enviar</button>
+</form>
+<p>📞 3112437441</p>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Paula Rincón | Psicología Clínica
+</div>
+
+<script>
+const sections=document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+sections.forEach(sec=>{
+const top=sec.getBoundingClientRect().top;
+if(top<window.innerHeight-100){sec.classList.add('show');}
+});
+});
+</script>
+
+</body>
+</html>
